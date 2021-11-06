@@ -6,4 +6,4 @@ elaborado con:
 - Html
 - Css
 
-informacion obtenida e imagenes de: https://shuumatsu-no-valkyrie.fandom.com/es/wiki/Ragnar%C3%B6k
+informacion e imagenes obtenidas de: https://shuumatsu-no-valkyrie.fandom.com/es/wiki/Ragnar%C3%B6k
