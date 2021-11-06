@@ -27,7 +27,7 @@ h1,h2,h3,h4{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
 }
-a{
+a, li{
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
 }
@@ -220,4 +220,119 @@ a{
     line-height: 30px;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+.fights{
+    width: 100%;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fights .zeus{
+    width: 400px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fights .zeus .card-1{
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'oswald', sans-serif;
+    transform: translate(80px, 130px);
+}
+.fights .zeus .card-1::after{
+    width: 80px;
+    height: 35px;
+    content: "";
+    background: var(--Red);
+    border-radius: 14px;
+    position: absolute;
+    opacity: 0.8;
+    z-index: -1;
+}
+.fights .zeus .card-2{
+    width: 200px;
+    height: 35px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+    font-size: 25px;
+    font-weight: 200;
+    font-family: 'oswald', sans-serif;
+    transform: translate(200px, 260px);
+}
+.fights .zeus .card-2:after{
+    width: 200px;
+    height: 35px;
+    content: "";
+    background: var(--Gray);
+    border-radius: 14px;
+    position: absolute;
+    opacity: 0.8;
+    z-index: -1;
+}
+.fights .zeus .card-3{
+    width: 350px;
+    height: 45px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+    font-size: 40px;
+    font-weight: 200;
+    font-family: 'oswald', sans-serif;
+    transform: translate(25px, 400px);
+}
+.fights .zeus .card-3:after{
+    width: 350px;
+    height: 45px;
+    content: "";
+    background: var(--Red);
+    border-radius: 14px;
+    position: absolute;
+    opacity: 0.8;
+    z-index: -1;
+}
+.fights .zeus img{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 10px var(--White));
+}
+.fights .list{
+    width: 50%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    text-align: left;
+}
+.fights .list h2{
+    font-size: 55px;
+    border-bottom: 3px solid var(--Red);
+}
+.fights .list p, .fights .list h3{
+    font-size: 25px;
+    margin: 10px 0;
+}
+.fights .list h3{
+    border-bottom: 3px solid var(--Red);
+}
+.fights .list li{
+    list-style: none;
+    font-size: 25px;
+}
+.fights .list li span{
+    color: var(--Red);
+    font-size: 26px;
 }
