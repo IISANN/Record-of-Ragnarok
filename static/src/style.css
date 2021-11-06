@@ -8,12 +8,12 @@
 :root{
     --dark: #000;
     --White: #fff;
-    --Whitelight:  #EBEBEB;
+    --Whitelight:  #f5f5f5;
     --Gray: #404040;
     --Red: rgb(206, 16, 16);
 }
 body{
-    max-width: 1950px;
+    max-width: 1550px;
     width: 100%;
     background: var(--White);
     color: var(--darklight);
@@ -27,14 +27,13 @@ h1,h2,h3,h4{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
 }
-a, li{
+a, li, p{
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
 }
 .nav{
     width: 100%;
     height: 50px;
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +45,7 @@ a, li{
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     margin: auto;
     z-index: 4;
@@ -78,7 +77,6 @@ a, li{
     transform: scale(1.2);
     border-radius: 50%;
     z-index:   1;
-
 }
 .music .btn{
     width: 100%;
@@ -98,35 +96,32 @@ a, li{
     cursor: pointer;
     fill: var(--White);
 }
-.nav h2{
-    color: var(--Red);
-    font-size: 2rem;
+.nav a{
+    color: var(--dark);
+    font-size: 32px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+.nav a:hover{
+    border-bottom: 2px solid var(--Red);
 }
 .nav img{
     width: 150px;
+    margin: 0 10px;
+    transform: translateY(4px);
 }
 .hero{
     width: 100%;
-    height: 670px;
-    background: url(../img/fondo.PNG);
-    background-size: cover;
+    height: 600px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
 }
-.hero::after{
-    content: "";
-    width: 100%;
-    height: 670px;
-    position: absolute;
-    background: var(--dark);
-    opacity: 0.1;
-    z-index: 1;
-}
 .hero .box{
-    width: 60%;
+    width: 50%;
     height: 100%;
     position: relative;
     display: flex;
@@ -136,11 +131,9 @@ a, li{
     z-index: 4;
 }
 .hero .title{
-    width: 40%;
+    width: 50%;
     height: 100%;
-    margin-left: 20px;
-    display: grid;
-    place-content: center;
+    display: flex;
     text-align: left;
     justify-content: center;
     align-items: center;
@@ -150,29 +143,83 @@ a, li{
     color: var(--dark);
     font-size: 96px;
     line-height: 85px;
-    margin-left: 15px;
-    margin-bottom: 30px;
 }
-.hero .title a{
-    width: 150px;
-    text-align: center;
-    text-decoration: none;
-    color: var(--White);
-    background: var(--Red);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    margin-left: 22px;
-    border-radius: 24px;
-    padding: 10px 0;
-}
-.hero .box img{
+.hero .box .adan{
     width: 550px;
     height: 600px;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     position: relative;
-    transform: translateY(55px);
+}
+.hero .box .adan::after, .hero .box .adan::before{
+    content: "";
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+}
+.hero .box .adan::after{
+    background: var(--Red);
+    opacity: 0.1;
+}
+.hero .box .adan::before{
+    background: url(../img/fondo.png);
+    background-size: cover;
+    border: 7px solid var(--Red);
+}
+.hero .box .adan .card-1, .hero .box .adan .card-2{
+    position: absolute;
+    color: var(--Red);
+    font-family: 'oswald', sans-serif;
+    font-weight: 400;
+}
+.hero .box .adan .card-1, .hero .box .adan .card-1::after{
+    width: 150px;
+    height: 60px;
+    border-radius: 24px;
+}
+.hero .box .adan .card-1{
+    color: var(--White);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    transform: translate(50px, 120px);
+}
+.hero .box .adan .card-1::after{
+    content: "";
+    background: var(--Gray);
+    position: absolute;
+    opacity: 0.7;
+    z-index: -1;
+}
+.hero .box .adan .card-2, .hero .box .adan .card-2::after{
+    width: 450px;
+    height: 60px;
+    border-radius: 24px;
+}
+.hero .box .adan .card-2{
+    color: var(--White);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    transform: translate(50px, 480px);
+}
+.hero .box .adan .card-2::after{
+    content: "";
+    background: var(--Red);
+    position: absolute;
+    opacity: 0.7;
+    z-index: -1;
+}
+.hero .box .adan img{
+    width: 550px;
+    height: 600px;
     filter: drop-shadow(0 0 20px var(--White));
 }
 .about{
@@ -232,6 +279,7 @@ a, li{
     width: 400px;
     height: 600px;
     position: relative;
+    margin-right: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -306,8 +354,8 @@ a, li{
     z-index: -1;
 }
 .fights .zeus img{
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 600px;
     filter: drop-shadow(0 0 10px var(--White));
 }
 .fights .list{
@@ -335,4 +383,60 @@ a, li{
 .fights .list li span{
     color: var(--Red);
     font-size: 26px;
+}
+.end{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.end .text{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+.end .img{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.end img{
+    width: 200px;
+    height: 300px;
+    border: 3px solid var(--Red);
+    border-radius: 4px;
+    box-shadow: 10px 10px 1px var(--Red);
+}
+.end h2{
+    font-size: 35px;
+    border-bottom: 3px solid var(--Red);
+}
+.end p{
+    margin-top: 20px;
+    font-size: 25px;
+    line-height: 35px;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer h2, footer a{
+    font-size: 15px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+footer a{
+    color: var(--White);
+    padding: 0 5px;
+    background: var(--Red);
+    border-radius: 10px;
 }
